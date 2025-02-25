@@ -5,14 +5,14 @@ import pandas as pd
 import numpy as np
 import torch
 
-from btbench_config import *
+from braintreebank_config import *
 
 class BrainTreebankSubject:
     """ 
         This class is used to load the neural data for a given subject and trial.
         It also contains methods to get the data for a given electrode and trial, and to get the spectrogram for a given electrode and trial.
     """
-    def __init__(self, subject_id, allow_corrupted=True, cache=False, dtype=torch.float32):
+    def __init__(self, subject_id, allow_corrupted=False, cache=False, dtype=torch.float32):
         self.subject_id = subject_id
         self.subject_identifier = f'btbank{subject_id}'
         self.allow_corrupted = allow_corrupted
@@ -178,8 +178,9 @@ class BrainTreebankSubject:
         else:
             if trial_id not in self.h5_files: self.open_neural_data_file(trial_id)
             neural_data_key = self.h5_neural_data_keys[electrode_label]
-            data = torch.from_numpy(self.h5_files[trial_id]['data'][neural_data_key][window_from:window_to]).to(self.dtype)
-            return data
+            # Explicitly convert to numpy array first
+            data = np.array(self.h5_files[trial_id]['data'][neural_data_key][window_from:window_to])
+            return torch.from_numpy(data).to(self.dtype)
 
     def get_all_electrode_data(self, trial_id, window_from=None, window_to=None):
         if trial_id not in self.electrode_data_length: self.load_neural_data(trial_id)

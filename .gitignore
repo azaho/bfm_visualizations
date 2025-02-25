@@ -1,0 +1,11 @@
+braintreebank/
+braintreebank_zip/
+
+.venv/
+__pycache__/
+
+movies/
+neural_data_frames/
+
+ffmpeg.exe
+Adobe Premiere*
