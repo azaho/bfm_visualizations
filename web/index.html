@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brain Foundation Models</title>
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Top strip with off-white background and noise texture */
+    .top-strip {
+      background-color: #f9f9f9;
+      background-image: url('https://img.freepik.com/premium-photo/silver-glitter-abstract-background_136875-2199.jpg');
+      background-repeat: repeat;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    /* Gray line between top strip and main body */
+    .separator {
+      height: 1px;
+      background-color: hsl(0, 0%, 70%);
+      margin: 0;
+    }
+
+    /* Brain logo styling */
+    .logo {
+      max-width: 250px; /* Adjust as needed */
+      height: auto;
+    }
+
+    /* Main content layout */
+    .content-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+
+    .left-content {
+      max-width: 80%;
+    }
+
+    .nav-menu {
+      display: none;
+      width: 100%;
+      padding: 10px 0;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .nav-menu li a:hover {
+      text-decoration: underline;
+    }
+
+    .right-links {
+      display: none;
+    }
+
+    .right-links ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: right;
+    }
+
+    .right-links li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .right-links li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: block;
+      }
+      .content-section {
+        flex-direction: column;
+      }
+      .left-content {
+        max-width: 100%;
+      }
+      .right-links {
+        display: none;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .nav-menu {
+        display: none;
+      }
+      .right-links {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top strip -->
+  <div class="top-strip">
+    <img src="brain_diagram_min.png" alt="Brain Logo" class="logo" />
+  </div>
+
+  <!-- Gray line separator -->
+  <div class="separator"></div>
+
+  <!-- Mobile Navigation Menu -->
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container" style="max-width: 1000px;">
+    <div class="content-section">
+      <div class="left-content">
+        <h1>Welcome to Brain Foundation Models</h1>
+        <p>Unlocking the Future of Neuroscience with Cutting-Edge Technology</p>
+
+        <h2>Revolutionizing Brain Research</h2>
+        <p>Our mission is to harness the power of foundation models to transform neuroscience. Imagine a world where brain dynamics are decoded, simulated, and seamlessly interfaced with technology. Our models pave the way for groundbreaking applications in neural simulation, brain-computer interfaces, and personalized treatments for neurological disorders.</p>
+
+        <h2>Why Choose Us?</h2>
+        <p>We are at the forefront of merging computational power with biological reality, creating tools that redefine our understanding of the human brain. Join us in pioneering a future where neural prosthetics integrate effortlessly with the brain, enhancing cognitive functions and improving quality of life.</p>
+
+        <h2>Research Proposal: Brain Foundation Models</h2>
+        <p>Foundation models have transformed fields like natural language processing and computer vision, offering unparalleled generalization across tasks and datasets. Yet, their potential in neuroscience remains untapped. While foundation models (such as transformers pretrained on large volumes of data) do not directly provide simple and interpretable models of brain function, their capacity for capturing complex and high-dimensional representations positions them as powerful tools for advancing medicine and neuroscience. This research aims to leverage these models to achieve a deeper understanding of brain dynamics, enabling transformative applications in neural simulation, precise modulation of brain activity, and improved brain-computer interfaces.</p>
+
+        <p>The envisioned future includes a comprehensive computational model of the brain, where the brain state can be decoded, simulated, and interfaced with seamlessly. Through invasive and non-invasive interventions, these models could facilitate tailored treatments for neurological disorders such as epilepsy, enhance communication between brains and machines as well as between brains and other brains, and optimize stimulation protocols for brain control and repair. By aligning the development of foundation models with neural data, this work aims to unlock the potential for predictive, interpretable, and scalable neural interventions that could redefine our interaction with and understanding of the human brain. Such advancements would pave the way for neural prosthetics that seamlessly integrate with the brain, simulate or restore cognitive functions, and improve quality of life for individuals with neurological disorders.</p>
+
+        <p>This vision aligns with a broader aspiration: to build tools that merge great computational power with biological reality, laying the groundwork for an alternative path to understanding and transforming the human brain.</p>
+
+        <p>
+          <strong>Andrii Zahorodnii</strong><br>
+          MIT Department of Electrical Engineering and Computer Science<br>
+          MIT Department of Brain and Cognitive Sciences
+        </p>
+      </div>
+      <div class="right-links">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (optional) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
